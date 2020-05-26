@@ -1,13 +1,8 @@
 package es.uned.lsi.eped.EvalJun2020;
 
-import java.util.Random;
-
-import es.uned.lsi.eped.DataStructures.IteratorIF;
-;
-
 public class Tarea2 {
 
-	public static void printStatus(DequeIF<Integer> param) {
+/*	public static void printStatus(DequeIF<Integer> param) {
 		System.out.print("Tamaño: ");
 		System.out.println(param.size());
 		if(!param.isEmpty()){
@@ -25,8 +20,8 @@ public class Tarea2 {
 		System.out.println();
 		System.out.println("--------------------------");
 	}
-	
-	
+
+
 	public static void printStatus(StackDeque<Integer> param) {
 		System.out.print("Tamaño: ");
 		System.out.println(param.size());
@@ -43,7 +38,7 @@ public class Tarea2 {
 		System.out.println();
 		System.out.println("--------------------------");
 	}
-	
+
 	public static void printStatus(QueueDeque<Integer> param) {
 		System.out.print("Tamaño: ");
 		System.out.println(param.size());
@@ -60,8 +55,8 @@ public class Tarea2 {
 		System.out.println();
 		System.out.println("--------------------------");
 	}
-	
-	
+
+
 	//genera pseudoaleatoriamente una bicola de longitud máxima num
 	//co valores enteros positivos entre 0 y maxValue
 	public static DequeIF<Integer> generateDeque(int num, int maxValue) {
@@ -90,7 +85,7 @@ public class Tarea2 {
 
 	public static void main(String [] args) {
 		//pruebas bicola
-		
+
 		DequeIF<Integer> deque = new Deque<Integer>();
 		deque.insertBack(4);
 		deque.insertFront(5);
@@ -106,10 +101,10 @@ public class Tarea2 {
 		printStatus(deque);
 		deque.clear();
 		printStatus(deque);
-		
-		
+
+
 		//pruebas pila con bicola
-		
+
 		StackDeque<Integer> stack = new StackDeque<Integer>();
 		stack.push(6);
 		stack.push(4);
@@ -125,8 +120,8 @@ public class Tarea2 {
 		stack.clear();
 		printStatus(stack);
 
-	
-		
+
+
 		//pruebas cola con bicola
 
 		QueueDeque<Integer> queue = new QueueDeque<Integer>();
@@ -142,8 +137,8 @@ public class Tarea2 {
 		queue.dequeue();
 		printStatus(queue);
 		queue.clear();
-		printStatus(queue);	
-		
+		printStatus(queue);
+
 		//prueba deque generado pseudoaleatoriamente
 
 		int n = 20;
@@ -151,6 +146,6 @@ public class Tarea2 {
 		DequeIF<Integer> deque2 = generateDeque(n,maxValue);
 		printStatus(deque2);
 	}
-	
+	*/
 	
 }
