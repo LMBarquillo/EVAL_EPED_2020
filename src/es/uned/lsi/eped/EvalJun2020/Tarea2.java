@@ -1,8 +1,12 @@
 package es.uned.lsi.eped.EvalJun2020;
 
+import es.uned.lsi.eped.DataStructures.IteratorIF;
+
+import java.util.Random;
+
 public class Tarea2 {
 
-/*	public static void printStatus(DequeIF<Integer> param) {
+	public static void printStatus(DequeIF<Integer> param) {
 		System.out.print("Tamaño: ");
 		System.out.println(param.size());
 		if(!param.isEmpty()){
@@ -146,6 +150,6 @@ public class Tarea2 {
 		DequeIF<Integer> deque2 = generateDeque(n,maxValue);
 		printStatus(deque2);
 	}
-	*/
+
 	
 }
