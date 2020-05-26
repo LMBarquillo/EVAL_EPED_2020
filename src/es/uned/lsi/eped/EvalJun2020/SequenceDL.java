@@ -1,55 +1,68 @@
-package es.uned.lsi.eped.DataStructures;
+package es.uned.lsi.eped.EvalJun2020;
 
-public abstract class Sequence<E> extends Collection<E> implements SequenceIF<E> {
+import es.uned.lsi.eped.DataStructures.Collection;
+import es.uned.lsi.eped.DataStructures.IteratorIF;
+
+public abstract class SequenceDL<E> extends Collection<E> implements SequenceDLIF<E> {
 	/* Clase privada que implementa la estructura de nodos de la secuencia */
 	protected class NodeSequence {
 
 		private E value;
 		private NodeSequence next;
-		
+		private NodeSequence prev;
+
 		NodeSequence(){
 			this.value = null;
 			this.next = null;
+			this.prev = null;
 		}
-		
+
 		NodeSequence(E e){
 			this.value = e;
 			this.next = null;
+			this.prev = null;
 		}
-				
+
 		public E getValue(){
 			return this.value;
 		}
-		
+
 		public void setValue(E e){
 			this.value = e;
 		}
-		
+
 		public NodeSequence getNext(){
 			return this.next;
 		}
-		
+
 		public void setNext(NodeSequence n){
 			this.next = n;
 		}
-		
+
+		public NodeSequence getPrev() {
+			return prev;
+		}
+
+		public void setPrev(NodeSequence p) {
+			this.prev = p;
+		}
 	}
 
 	/* Clase privada que implementa un iterador para la secuencia */
 	private class SequenceIterator implements IteratorIF<E> {
-		
+
 		private NodeSequence currentNode;
-		
+
 		SequenceIterator(){
 			this.currentNode = firstNode;
 		}
-		
+
 		public E getNext() {
-			E elem = this.currentNode.getValue(); 
+			E elem = this.currentNode.getValue();
 			this.currentNode = this.currentNode.getNext();
 			return elem;
 		}
-	    
+
 		public boolean hasNext() {
 			return this.currentNode != null;
 		}
@@ -59,22 +72,22 @@ public abstract class Sequence<E> extends Collection<E> implements SequenceIF<E>
 		}
 
 	}
-	
+
 	protected NodeSequence firstNode;
-	
+
 	/* Devuelve el primer nodo de la secuencia */
 	private NodeSequence getFirstNode() {
 		return this.firstNode;
 	}
 
 	/* Constructor de una secuencia vacía */
-	public Sequence () {
-		super();               /* Creamos una colección */         
+	public SequenceDL() {
+		super();               /* Creamos una colección */
 		this.firstNode = null; /* La secuencia es vacía */
 	}
-	
+
 	/* Constructor por copia */
-	public Sequence (Sequence<E> s) {
+	public SequenceDL(SequenceDL<E> s) {
 		this();
 		if ( ! s.isEmpty() ) {
 			this.size = s.size();
@@ -84,6 +97,7 @@ public abstract class Sequence<E> extends Collection<E> implements SequenceIF<E>
 			while ( nodeS.getNext() != null ) {
 				nodeS = nodeS.getNext();
 				NodeSequence newNode = new NodeSequence(nodeS.getValue());
+				newNode.setPrev(pNode);		// Indicamos también el previo.
 				pNode.setNext(newNode);
 				pNode = newNode;
 			}
