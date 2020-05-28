@@ -46,6 +46,9 @@ public class ListIP<E> extends SequenceDL<E> implements ListIPIF<E> {
 		NodeSequence newNode = new NodeSequence(elem);
 		if(this.pointer == 1) {
 			newNode.setNext(this.firstNode);
+			if(this.firstNode != null) {
+				this.firstNode.setPrev(newNode);
+			}
 			this.firstNode = newNode;
 		} else {
 			NodeSequence prevNode = getNode(this.pointer - 1);
