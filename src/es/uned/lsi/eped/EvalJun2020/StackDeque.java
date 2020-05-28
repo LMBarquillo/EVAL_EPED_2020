@@ -5,7 +5,7 @@ import es.uned.lsi.eped.DataStructures.StackIF;
 public class StackDeque<E> extends Deque<E> implements StackIF<E> {
 	/* Obtiene el elemento de la cima de la pila */
 	@Override public E getTop() {
-		if(!isEmpty()) {
+		if (!isEmpty()) {
 			return this.firstNode.getValue();
 		}
 		return null;

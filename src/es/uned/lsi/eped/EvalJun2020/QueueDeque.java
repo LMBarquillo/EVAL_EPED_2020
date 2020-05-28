@@ -5,7 +5,7 @@ import es.uned.lsi.eped.DataStructures.QueueIF;
 public class QueueDeque<E> extends Deque<E> implements QueueIF<E> {
 	/* Obtiene el primer elemento de la cola */
 	@Override public E getFirst() {
-		if(!isEmpty()) {
+		if (!isEmpty()) {
 			return this.firstNode.getValue();
 		}
 		return null;
