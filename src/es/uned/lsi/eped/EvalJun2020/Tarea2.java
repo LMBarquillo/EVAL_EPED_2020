@@ -107,7 +107,7 @@ public class Tarea2 {
 		printStatus(deque);
 
 
-/*		//pruebas pila con bicola
+		//pruebas pila con bicola
 
 		StackDeque<Integer> stack = new StackDeque<Integer>();
 		stack.push(6);
@@ -126,7 +126,7 @@ public class Tarea2 {
 
 
 
-		//pruebas cola con bicola
+/*		//pruebas cola con bicola
 
 		QueueDeque<Integer> queue = new QueueDeque<Integer>();
 		queue.enqueue(6);

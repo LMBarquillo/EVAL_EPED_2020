@@ -23,7 +23,7 @@ public class Deque<E> extends SequenceDL<E> implements DequeIF<E> {
 	@Override public void insertFront(E e) {
 		NodeSequence newNode = new NodeSequence(e);
 		newNode.setNext(this.firstNode);
-		if(this.size > 0) {
+		if(!isEmpty()) {
 			this.firstNode.setPrev(newNode);
 		} else {
 			this.lastNode = newNode;
@@ -33,7 +33,7 @@ public class Deque<E> extends SequenceDL<E> implements DequeIF<E> {
 	}
 
 	@Override public void insertBack(E e) {
-		if(this.size == 0) {
+		if(isEmpty()) {
 			insertFront(e);
 		} else {
 			NodeSequence newNode = new NodeSequence(e);
@@ -45,7 +45,7 @@ public class Deque<E> extends SequenceDL<E> implements DequeIF<E> {
 	}
 
 	@Override public void removeFront() {
-		if(size > 0) {
+		if(!isEmpty()) {
 			this.firstNode = this.firstNode.getNext();
 			this.firstNode.setPrev(null);
 			this.size--;
@@ -53,7 +53,7 @@ public class Deque<E> extends SequenceDL<E> implements DequeIF<E> {
 	}
 
 	@Override public void removeBack() {
-		if(size > 0) {
+		if(!isEmpty()) {
 			this.lastNode = this.lastNode.getPrev();
 			this.lastNode.setNext(null);
 			this.size--;
