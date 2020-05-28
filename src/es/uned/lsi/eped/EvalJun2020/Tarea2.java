@@ -126,7 +126,7 @@ public class Tarea2 {
 
 
 
-/*		//pruebas cola con bicola
+		//pruebas cola con bicola
 
 		QueueDeque<Integer> queue = new QueueDeque<Integer>();
 		queue.enqueue(6);
@@ -141,7 +141,7 @@ public class Tarea2 {
 		queue.dequeue();
 		printStatus(queue);
 		queue.clear();
-		printStatus(queue);*/
+		printStatus(queue);
 
 		//prueba deque generado pseudoaleatoriamente
 
