@@ -26,7 +26,7 @@ public class Tarea2 {
 	}
 
 
-/*	public static void printStatus(StackDeque<Integer> param) {
+	public static void printStatus(StackDeque<Integer> param) {
 		System.out.print("Tamaño: ");
 		System.out.println(param.size());
 		if(!param.isEmpty()){
@@ -58,7 +58,7 @@ public class Tarea2 {
 		}
 		System.out.println();
 		System.out.println("--------------------------");
-	}*/
+	}
 
 
 	//genera pseudoaleatoriamente una bicola de longitud máxima num
@@ -151,5 +151,4 @@ public class Tarea2 {
 		printStatus(deque2);
 	}
 
-	
 }

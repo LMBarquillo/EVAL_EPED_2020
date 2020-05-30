@@ -21,12 +21,12 @@ public class Deque<E> extends SequenceDL<E> implements DequeIF<E> {
 
 	/* Obtiene el primer elemento de la colección */
 	@Override public E getFront() {
-		return this.firstNode.getValue();
+		return isEmpty() ? null : this.firstNode.getValue();
 	}
 
 	/* Obtiene el último elemento de la colección */
 	@Override public E getBack() {
-		return this.lastNode.getValue();
+		return isEmpty() ? null : this.lastNode.getValue();
 	}
 
 	/* Inserta un nuevo elemento en la primera posición */
